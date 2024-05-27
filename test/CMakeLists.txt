@@ -1,7 +1,7 @@
-set(test_sources main.tst.cpp test_class.tst.cpp )
+set(SOURCES main.tst.cpp test_class.tst.cpp )
 set(TEST_EXEC ${PROJECT_NAME}_unit_tests)
 
-add_executable(${TEST_EXEC} ${test_sources})
+add_executable(${TEST_EXEC} ${SOURCES})
 target_link_libraries(${TEST_EXEC} PRIVATE ${PROJECT_NAME} gmock gtest)
 
 if(DCOL_ENABLE_CODE_COVERAGE)
