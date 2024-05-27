@@ -1,9 +1,13 @@
 cmake_minimum_required(VERSION 3.5.2)
 
+enable_testing()
+
 project(
     gtest_example
     LANGUAGES CXX
     VERSION 1.0.0)
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -21,7 +25,7 @@ set(SOURCES
 # Add an executable
 add_executable(${APP_NAME} ${SOURCES})
 
-
+#target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_link_libraries(${APP_NAME} PRIVATE GTest::gtest_main)
 
 include(GoogleTest)
