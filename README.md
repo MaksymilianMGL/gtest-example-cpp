@@ -8,6 +8,7 @@ sudo apt install build-essential libtool autoconf libssl-dev libssh-dev cmake
 ```
 cd gtest-example-cpp
 mkdir build
+cd build
 cmake ..
 make
 ```
