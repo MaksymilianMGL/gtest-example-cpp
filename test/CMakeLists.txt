@@ -1,4 +1,4 @@
-set(test_sources main.tst.cpp extractors.tst.cpp event_scheduler.tst.cpp)
+set(test_sources main.tst.cpp test_class.tst.cpp )
 set(TEST_EXEC ${PROJECT_NAME}_unit_tests)
 
 add_executable(${TEST_EXEC} ${test_sources})
