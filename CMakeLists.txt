@@ -28,7 +28,10 @@ add_library(${PROJECT_NAME} STATIC ${SOURCES})
 # Link GTest to the project
 target_link_libraries(${APP_NAME} PRIVATE GTest::gtest_main)
 include(GoogleTest)
-gtest_discover_tests(${APP_NAME})
+gtest_discover_tests(
+    ${APP_NAME}
+    TEST_XML_OUTPUT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/output"
+)
 
 # Add CMake from test folder
 add_subdirectory(test)
